@@ -1,5 +1,3 @@
-package Github;
-
 /*
  * Clase hija heredada trabajadores
  * Su propósito es: Tener atributos diferentes para los trabajadores que son identificados 
