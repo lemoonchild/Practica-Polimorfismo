@@ -4,6 +4,7 @@ public class Controlador {
     boolean Es_Docente;
     trabajadores trabajador;
     ArrayList<trabajadores> Trabajador_ingresados = new ArrayList<>();
+    
 
     public void Verificar_tipo_de_Trabajador() {
     }
