@@ -8,28 +8,13 @@ public class No_Docente extends trabajadores {
     // Atributos de la clase:
     private int cantidadFeriados;
 
-    // Constructores de la clase
-    public No_Docente() {
-
-        super();
-
-    }
-
+    // Constructor de la clase
     public No_Docente(String nombre, String identificación, int salarioBase, int ausencias_impuntualidades,
             int cantidadFeriados) {
 
         super(nombre, identificación, salarioBase, ausencias_impuntualidades);
         this.cantidadFeriados = cantidadFeriados;
 
-    }
-
-    // Getters y Setters de los atrubutos
-    public int getCantidadFeriados() {
-        return cantidadFeriados;
-    }
-
-    public void setCantidadFeriados(int cantidadFeriados) {
-        this.cantidadFeriados = cantidadFeriados;
     }
 
     // Características para el cálculo de salario del No Docente
@@ -51,7 +36,7 @@ public class No_Docente extends trabajadores {
      */
     public double salario() {
 
-        return super.salario() + plusFeriados();
+        return super.salario() + plusFeriados() - descuentoAusencias();
 
     }
 

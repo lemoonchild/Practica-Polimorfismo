@@ -11,12 +11,7 @@ public class Docente extends trabajadores {
     private int gradoCientifico;
     private int categoria;
 
-    // Construtores de la clase
-    public Docente() {
-
-        super(); // lamada al constructr padre con sus atributos
-    }
-
+    // Construtor de la clase
     public Docente(String nombre, String area, int salarioBase, int horasAusencia, double antiguedad,
             int gradoCientifico, int categoria) {
 
@@ -27,29 +22,22 @@ public class Docente extends trabajadores {
 
     }
 
-    // Getters y Setters por cada atributo
-    public double getPlusantiguedad() {
-        return antiguedad;
-    }
+    // Getter atributo
+    public String getCategoria() {
+        String Categoria = "";
+        if (categoria == 1) {
+            Categoria = "Decano";
+        } else if (categoria == 2) {
+            Categoria = "Maestro";
+        } else if (categoria == 3) {
+            Categoria = "Auxiliar";
+        } else if (categoria == 4) {
+            Categoria = "Secretaria";
+        } else {
+            Categoria = "no registrada";
+        }
 
-    public void setPlusantiguedad(double plusantiguedad) {
-        this.antiguedad = plusantiguedad;
-    }
-
-    public int getPlusgradoCientifico() {
-        return gradoCientifico;
-    }
-
-    public void setPlusgradoCientifico(int plusgradoCientifico) {
-        this.gradoCientifico = plusgradoCientifico;
-    }
-
-    public int getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(int categoria) {
-        this.categoria = categoria;
+        return Categoria;
     }
 
     // Caracteristicas del docente para el calculo de su salario
@@ -70,12 +58,11 @@ public class Docente extends trabajadores {
     public int plusGradoCientifico() {
 
         int agregado = 0;
-        if (gradoCientifico == 1) {
+        if (gradoCientifico == 1) { // Master
             agregado = 80;
-        }
-        if (gradoCientifico == 2) {
+        } else if (gradoCientifico == 2) { // Doctorado
             agregado = 120;
-        } else if (gradoCientifico == 3) {
+        } else if (gradoCientifico == 3) { // Ninguno
             agregado = 0;
         }
         return agregado;
@@ -90,23 +77,23 @@ public class Docente extends trabajadores {
         double salarioDocente = 0;
         double salarioTrabajador = super.salario();
 
-        if (categoria == 1) {
+        if (categoria == 1) { // Decano
             salarioDocente += 0.2 * salarioTrabajador;
 
         }
-        if (categoria == 2) {
+        if (categoria == 2) { // Maestro
             salarioDocente += 0.15 * salarioTrabajador;
 
         }
-        if (categoria == 3) {
+        if (categoria == 3) { // Auxiliar
             salarioDocente += 0.02 * salarioTrabajador;
 
         }
-        if (categoria == 4) {
+        if (categoria == 4) { // Secretaria
             salarioDocente += 0.10 * salarioTrabajador;
 
         }
-        if (categoria == 5) {
+        if (categoria == 5) { // Ninuno de los anteriores
             salarioDocente = salarioTrabajador;
 
         }

@@ -27,44 +27,9 @@ public class trabajadores {
     }
 
     // Getters y Setters de los atributos del trabajador
+
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getIdentificación() {
-        return identificación;
-    }
-
-    public void setIdentificación(String identificación) {
-        this.identificación = identificación;
-    }
-
-    public int getSalarioBase() {
-        return salarioBase;
-    }
-
-    public void setSalarioBase(int salarioBase) {
-        this.salarioBase = salarioBase;
-    }
-
-    public int getAusencias_impuntualidades() {
-        return ausencias_impuntualidades;
-    }
-
-    public void setAusencias_impuntualidades(int ausencias_impuntualidades) {
-        this.ausencias_impuntualidades = ausencias_impuntualidades;
-    }
-
-    public int getTarifa_diaria() {
-        return tarifa_diaria;
-    }
-
-    public void setTarifa_diaria(int tarifa_diaria) {
-        this.tarifa_diaria = tarifa_diaria;
     }
 
     // Calculos del salario promedio de los trabadores que será heredado por las
