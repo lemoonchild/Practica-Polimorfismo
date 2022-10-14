@@ -11,6 +11,22 @@ public class vista {
     Scanner scan = new Scanner(System.in);
 
     /**
+     * Muestra las posibles opciones a elegir por el usuario.
+     * 
+     * @return entero con la opción solicitada por el usuario
+     */
+    public int Menu() {
+        System.out.println("\n¿Qué hará?");
+        System.out.println("1. Ingresar datos de nuevo trabajador");
+        System.out.println("2. Ver listado de trabajadores");
+        System.out.println("3. Ver recuento de salarios de trabajadores");
+        System.out.println("4. Ver estadísticas");
+        System.out.println("5. Salir\n");
+
+        return solicitarI(""); // Envia un entero con la opción del usuario.
+    }
+
+    /**
      * Imprime una solicitud y recibe un dato tipo int
      * Evita una excepción -InputMismatchException- volviendo a solicitar el dato en
      * caso de que ocurra.
