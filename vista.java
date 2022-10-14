@@ -20,8 +20,7 @@ public class vista {
         System.out.println("1. Ingresar datos de nuevo trabajador");
         System.out.println("2. Ver listado de trabajadores");
         System.out.println("3. Ver recuento de salarios de trabajadores");
-        System.out.println("4. Ver estadísticas");
-        System.out.println("5. Salir\n");
+        System.out.println("4. Salir\n");
 
         return solicitarI(""); // Envia un entero con la opción del usuario.
     }
