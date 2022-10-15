@@ -34,17 +34,17 @@ public class Controlador {
         for (int i = 0; i < per; i++) { // De esos hace una vez cada función por números que hay
             Verificar_tipo_de_Trabajador(); // Verifica que tipo de personas es
             if (Es_Docente == false) {
-                No_Docente nodocente_temp = new No_Docente(vista.solicitarS("Cuál es el nombre de tu persona"),
-                        vista.solicitarS("Cuáles la identificación de tu persona"),
-                        vista.solicitarI("Cuál es su salario base"),
-                        vista.solicitarI("Cuántas ausencias ha tenido"),
-                        vista.solicitarI("Cuántos feriados tuvo?"));
+                No_Docente nodocente_temp = new No_Docente(vista.solicitarS("¿Cuál es el nombre de tu persona"),
+                        vista.solicitarS("¿Cuáles la identificación de tu persona?"),
+                        vista.solicitarI("¿Cuál es su salario base?"),
+                        vista.solicitarI("¿Cuántas ausencias ha tenido?"),
+                        vista.solicitarI("¿Cuántos feriados tuvo?"));
                 Trabajador_ingresados.add(nodocente_temp);
             }
             if (Es_Docente == true) {
-                Docente docente_temp = new Docente(vista.solicitarS("Cuál es el nombre de tu persona"),
-                        vista.solicitarS("Cuáles la identificación de tu persona"),
-                        vista.solicitarI("Cuál es su salario base"),
+                Docente docente_temp = new Docente(vista.solicitarS("¿Cuál es el nombre de tu persona?"),
+                        vista.solicitarS("¿Cuáles la identificación de tu persona?"),
+                        vista.solicitarI("¿Cuál es su salario base?"),
                         vista.solicitarI("¿Cuántas horas de ausencia tiene?"),
                         vista.solicitarD("¿Cuántos años de anitugedad tiene?"),
                         vista.menu_de_grado_científico(),
