@@ -3,8 +3,6 @@ import java.util.ArrayList;
 public class Controlador {
     boolean Es_Docente; // False es no_docente, True es docente
     trabajadores trabajador;
-    Docente docente;
-    No_Docente no_docente;
     ArrayList<trabajadores> Trabajador_ingresados = new ArrayList<>();
     vista vista = new vista();
 
